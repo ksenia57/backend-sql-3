@@ -30,7 +30,7 @@ SELECT f.* FROM (SELECT flight_no, count(*) FROM flights GROUP BY flight_no ORDE
 # Вывести число перелетов внутри одной таймзоны
 # Нужно вывести 1 значение в колонке count
 TASK_3_QUERY = """
-SELECT count(*)
+SELECT count(*) 
 FROM flights
 LEFT JOIN airports_data as arrival
 	ON flights.arrival_airport=arrival.airport_code
